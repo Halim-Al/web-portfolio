@@ -112,7 +112,7 @@ main .About h2 {
   text-align: center;
   color: #394360;
 }
-main .About .Language {
+main .About .Skills .Language {
   margin-top: 65px;
   display: grid;
   gap: 50px;
@@ -120,7 +120,7 @@ main .About .Language {
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
 }
-main .About .Language div {
+main .About .Skills .Language div {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -130,11 +130,11 @@ main .About .Language div {
   background: #e0e0e0;
   box-shadow: 28px 28px 55px #bebebe, -28px -28px 55px #ffffff;
 }
-main .About .Language div :hover {
+main .About .Skills .Language div :hover {
   scale: 1.2;
   transition: 0.5s;
 }
-main .About .Language img {
+main .About .Skills .Language img {
   width: 150px;
 }
 main .Project {
