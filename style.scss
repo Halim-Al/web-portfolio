@@ -317,10 +317,7 @@ footer{
         nav{
 
         
-        .brand{
-
-           
-        }
+       
         .navbar{
             li{
                 margin-right: 10px;
@@ -415,7 +412,7 @@ footer{
 
   
 //   mobile
-@media (min-width: 300px) and (max-width: 767px) {
+@media (min-width: 300px) and (max-width: 480px) {
  
 
     header{
@@ -641,9 +638,7 @@ footer{
         .Contact{
 
             margin: 160px 50px 50px;
-            h1{
-                
-            }
+           
 
             .Contact-container{
                 form{

@@ -8,5 +8,36 @@
 </head>
 <body>
     <h1>thanks for the message</h1>
+    Cari = InputBox("masukkan id Matkul yang dicari")
+Data_Matkul.Seek "=", Cari
+
+If Data_Matkul.NoMatch Then
+X = MsgBox("maaf id Matkul yang dicari tidak ada", vbCritical)
+Exit Sub
+End If
+
+Text_Kodem = Data_Matkul!Kodem
+Text_Kodem.Enabled = False
+
+Text_Kodem = Data_Matkul!Text_Kodem
+Text_Nama = Data_Matkul!Nama
+Text_Jam= Data_Matkul!Jam
+Text_SKS = Data_Matkul!Jumlah_SKS
+Text_Dosen = Data_Matkul!Dosen_Pengajar
+
+
+X = MsgBox("Apakah yakin data akan dihapus?", vbYesNo, "Hapus Data")
+If X = vbYes Then
+
+Y = MsgBox("Data Berhasil dihapus", vbOKOnly)
+
+
+Data_Matkul.Delete
+DBGrid1.Refresh
+
+Data1.Refresh
+kosong
+
+End If
 </body>
 </html>

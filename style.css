@@ -311,7 +311,7 @@ footer {
     height: 260px;
   }
 }
-@media (min-width: 300px) and (max-width: 767px) {
+@media (min-width: 300px) and (max-width: 480px) {
   header {
     position: static;
   }
