@@ -226,6 +226,7 @@ main .Contact .Contact-container form button {
   border-radius: 5px;
   width: -moz-fit-content;
   width: fit-content;
+  background: rgb(17, 173, 235);
 }
 main .Contact .brand {
   display: flex;
