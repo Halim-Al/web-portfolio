@@ -45,6 +45,9 @@ main .Hero {
   display: flex;
   margin: 160px 114px;
 }
+main .Hero .titlelayout {
+  transform: translateX(-1000px);
+}
 main .Hero .hello {
   font-family: "Manrope", sans-serif;
   text-transform: uppercase;
@@ -84,6 +87,7 @@ main .Hero .imglayout {
   margin-top: -40px;
   margin-left: 50px;
   width: 100%;
+  opacity: 0;
 }
 main .Hero .imglayout img:first-child {
   margin-left: 130px;
@@ -94,21 +98,35 @@ main .Hero .imglayout svg {
   margin-left: 60px;
   margin-top: 60px;
 }
+main .Hero .titlelayout.show {
+  transform: translateX(0);
+  transition: 2s;
+}
+main .Hero .imglayout.show {
+  rotate: 360deg;
+  opacity: 1;
+  transition: 2s;
+}
 main .About {
   margin: 160px 114px;
 }
-main .About h1 {
+main .About .Abouttext {
+  transform: translateY(-2000px);
+}
+main .About .Abouttext h1 {
   color: #8C82FC;
   font-size: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: -10px;
 }
-main .About p {
+main .About .Abouttext p {
   color: #394360;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
   font-weight: 200;
 }
 main .About h2 {
+  margin-top: 150px;
   text-align: center;
   color: #394360;
 }
@@ -118,6 +136,7 @@ main .About .Skills .Language {
   gap: 50px;
   align-items: center;
   justify-items: center;
+  transform: translatex(-2000px);
   grid-template-columns: repeat(3, 1fr);
 }
 main .About .Skills .Language div {
@@ -133,6 +152,14 @@ main .About .Skills .Language div {
 main .About .Skills .Language div :hover {
   scale: 1.2;
   transition: 0.5s;
+}
+main .About .Abouttext.show {
+  transform: translateY(0);
+  transition: 1.2s;
+}
+main .About .Language.show {
+  transform: translateX(0);
+  transition: 1.5s;
 }
 main .Project {
   margin: 160px 114px;
@@ -151,6 +178,7 @@ main .Project .myproject {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  opacity: 0;
 }
 main .Project .myproject div {
   height: 350px;
@@ -170,6 +198,10 @@ main .Project .myproject div img {
   height: 300px;
   -o-object-fit: fill;
      object-fit: fill;
+}
+main .Project .myproject.show {
+  opacity: 1;
+  transition: 2s;
 }
 main .Contact {
   margin-top: -50px;
