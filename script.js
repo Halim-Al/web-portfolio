@@ -29,7 +29,11 @@ const observhero = new IntersectionObserver(entries =>{
 
 
     })
-})
+}
+,{
+    threshold: 0.1
+}
+)
 const observeskills = new IntersectionObserver(entries =>{
     entries.forEach(entry =>{
         language.classList.toggle('show' , !entry.isIntersecting)

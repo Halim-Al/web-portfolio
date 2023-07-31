@@ -155,7 +155,7 @@ main .About .Skills .Language div :hover {
 }
 main .About .Abouttext.show {
   transform: translateY(0);
-  transition: 1.2s;
+  transition: 1s;
 }
 main .About .Language.show {
   transform: translateX(0);
