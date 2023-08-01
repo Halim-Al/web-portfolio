@@ -30,12 +30,20 @@ header{
             
             li{
                 list-style: none;
+
+                :hover{
+                    color: $main-color;
+                }
                 a{
                     letter-spacing: 1px;
                     font-weight: 600;
                     color: #394360;
                     text-decoration: none;
+                    
+                    
                 }
+
+                
             }
             button{
                 color: beige;
@@ -142,15 +150,26 @@ main{
 
 .About{
     margin: 160px 114px;
-
+    
     .Abouttext{
         transform: translateY(-2000px);
+        display: grid;
+        justify-items: start;
         h1{
             color: $main-color;
             font-size: 50px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-bottom: -10px;
         }
+
+        hr{
+            margin-top: 10px;
+            background-color: $main-color;
+           
+           
+        }
+
+       
     
         p{
             color: #394360;
@@ -158,6 +177,8 @@ main{
             font-size: 20px;
             font-weight: 200;
         }
+
+        
     }
    
     h2{
@@ -204,7 +225,7 @@ main{
     }
     .Abouttext.show{
         transform: translateY(0);
-        transition: 1s;
+        transition: 3s;
     }
 
     
@@ -225,6 +246,10 @@ main{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+
+    hr{
+       display: none;
+    }
     h2{
         text-align: center;
         color: #394360;
@@ -258,6 +283,8 @@ main{
             }
         }
 
+       
+
     }
 
     .myproject.show{
@@ -283,16 +310,19 @@ main{
             display: grid;
             justify-content: center;
 
-           
+           :active, :hover{
+            background-color: #e0e0e0;
+            transition: .5s;
+           }
             
             input
             
             
-            {   color: #e0e0e0;
+            {   color: black;
                 display: block;
                 outline: none;
                 border: none;
-                background: #394360;
+                background: $main-color;
                 margin-top: 2px;
                 border-radius: 5px;
                 width: 400px;
@@ -300,6 +330,8 @@ main{
                 ::placeholder{
                     color: #ffffff;
                     opacity: .5;
+
+                    
                 }
                  
 
@@ -325,7 +357,7 @@ main{
                 padding: 10px;
                 border-radius: 5px;
                 width: fit-content;
-                background: rgb(17, 173, 235);
+               
             }
         }
     }
@@ -461,6 +493,24 @@ footer{
 //   mobile
 @media (min-width: 320px) and (max-width: 480px) {
  
+    @keyframes line{
+        0%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        85%{
+            opacity: 0.1;
+        }
+
+        100%{
+            transform: translateX(200px);
+            opacity: 0;
+        }
+
+        
+    }
+
 
     header{
        
@@ -628,6 +678,21 @@ footer{
             h1{
                 font-size: 40px;
             }
+
+           
+    
+            hr{
+                width: 50px;
+                height: 5px;
+               background-color: $main-color;
+               margin-top: 14px;
+               margin-right: 200px;
+               animation-name: line;
+               animation-duration: 4s;
+               animation-direction: normal;
+               animation-iteration-count: infinite;
+            }
+
             p{
                 font-size: 18px;
             }
@@ -667,7 +732,19 @@ footer{
                 width: max-content;
                 font-size: 40px;
             }
-
+            
+            hr{
+                display: block;
+                width: 50px;
+                height: 5px;
+               background-color: $main-color;
+               margin-top: -20px;
+               margin-right: 200px;
+               animation-name: line;
+               animation-duration: 4s;
+               animation-direction: normal;
+               animation-iteration-count: infinite;
+            }
             h2{
                 width: fit-content;
                 font-size: 20px;
@@ -700,11 +777,17 @@ footer{
 
             .Contact-container{
                 form{
+                     width: 400px;
+                    
                     input{
                         color: #e0e0e0;
                         width: 250px;
                         padding: 15px;
+                        margin: auto;
+                        margin-top: 2px;
                     }
+
+                  
                 }
             }
         }

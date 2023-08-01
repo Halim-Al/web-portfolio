@@ -26,6 +26,9 @@ header nav .navbar {
 header nav .navbar li {
   list-style: none;
 }
+header nav .navbar li :hover {
+  color: #8C82FC;
+}
 header nav .navbar li a {
   letter-spacing: 1px;
   font-weight: 600;
@@ -112,12 +115,18 @@ main .About {
 }
 main .About .Abouttext {
   transform: translateY(-2000px);
+  display: grid;
+  justify-items: start;
 }
 main .About .Abouttext h1 {
   color: #8C82FC;
   font-size: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: -10px;
+}
+main .About .Abouttext hr {
+  margin-top: 10px;
+  background-color: #8C82FC;
 }
 main .About .Abouttext p {
   color: #394360;
@@ -155,7 +164,7 @@ main .About .Skills .Language div :hover {
 }
 main .About .Abouttext.show {
   transform: translateY(0);
-  transition: 1s;
+  transition: 3s;
 }
 main .About .Language.show {
   transform: translateX(0);
@@ -168,6 +177,9 @@ main .Project h1 {
   color: #8C82FC;
   font-size: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main .Project hr {
+  display: none;
 }
 main .Project h2 {
   text-align: center;
@@ -218,12 +230,16 @@ main .Contact .Contact-container form {
   display: grid;
   justify-content: center;
 }
+main .Contact .Contact-container form :active, main .Contact .Contact-container form :hover {
+  background-color: #e0e0e0;
+  transition: 0.5s;
+}
 main .Contact .Contact-container form input {
-  color: #e0e0e0;
+  color: black;
   display: block;
   outline: none;
   border: none;
-  background: #394360;
+  background: #8C82FC;
   margin-top: 2px;
   border-radius: 5px;
   width: 400px;
@@ -258,7 +274,6 @@ main .Contact .Contact-container form button {
   border-radius: 5px;
   width: -moz-fit-content;
   width: fit-content;
-  background: rgb(17, 173, 235);
 }
 main .Contact .brand {
   display: flex;
@@ -342,6 +357,19 @@ footer {
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
+  @keyframes line {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    85% {
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+  }
   header {
     position: static;
   }
@@ -449,6 +477,17 @@ footer {
   main .About h1 {
     font-size: 40px;
   }
+  main .About hr {
+    width: 50px;
+    height: 5px;
+    background-color: #8C82FC;
+    margin-top: 14px;
+    margin-right: 200px;
+    animation-name: line;
+    animation-duration: 4s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+  }
   main .About p {
     font-size: 18px;
   }
@@ -477,6 +516,18 @@ footer {
     width: max-content;
     font-size: 40px;
   }
+  main .Project hr {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #8C82FC;
+    margin-top: -20px;
+    margin-right: 200px;
+    animation-name: line;
+    animation-duration: 4s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+  }
   main .Project h2 {
     width: -moz-fit-content;
     width: fit-content;
@@ -498,9 +549,14 @@ footer {
   main .Contact {
     margin: 160px 50px 50px;
   }
+  main .Contact .Contact-container form {
+    width: 400px;
+  }
   main .Contact .Contact-container form input {
     color: #e0e0e0;
     width: 250px;
     padding: 15px;
+    margin: auto;
+    margin-top: 2px;
   }
 }/*# sourceMappingURL=style.css.map */
