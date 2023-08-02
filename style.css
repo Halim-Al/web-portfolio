@@ -106,7 +106,7 @@ main .Hero .titlelayout.show {
   transition: 2s;
 }
 main .Hero .imglayout.show {
-  rotate: 360deg;
+  transform: rotate(360deg);
   opacity: 1;
   transition: 2s;
 }
@@ -292,7 +292,7 @@ footer {
   border-top-left-radius: 10px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   header {
     z-index: 9;
     background: #8C82FC;
@@ -305,6 +305,7 @@ footer {
   }
   main .Hero {
     margin: 160px 50px;
+    width: 80vh;
   }
   main .Hero .imglayout {
     width: 100%;
@@ -318,6 +319,7 @@ footer {
   }
   main .About {
     margin: 160px 50px;
+    margin-top: -100px;
   }
   main .About h1 {
     font-size: 40px;
@@ -328,12 +330,12 @@ footer {
   main .About .Skills {
     gap: 30px;
   }
-  main .About .Skills div {
+  main .About .Skills .Language div {
     padding: 8px;
     width: 150px;
     height: 110px;
   }
-  main .About .Skills img {
+  main .About .Skills .Language img {
     width: 110px;
   }
   main .Project {
@@ -542,6 +544,7 @@ footer {
   main .Project .myproject div {
     width: 300px;
     height: 160px;
+    margin-top: 10px;
   }
   main .Project .myproject div img {
     width: 300px;
