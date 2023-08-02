@@ -217,6 +217,7 @@ main .Project .myproject.show {
   transition: 2s;
 }
 main .Contact {
+  margin: 160px 114px;
   margin-top: -50px;
 }
 main .Contact h1 {
@@ -277,8 +278,10 @@ main .Contact .Contact-container form button {
   width: fit-content;
 }
 main .Contact .brand {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+  margin-bottom: -100px;
 }
 main .Contact .brand p {
   margin-right: 20px;
