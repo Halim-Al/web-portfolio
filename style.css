@@ -288,6 +288,7 @@ main .Contact .brand p {
 }
 
 footer {
+  width: 100%;
   text-align: center;
   padding: 10px;
   background-color: #8C82FC;
@@ -568,5 +569,8 @@ footer {
     padding: 15px;
     margin: auto;
     margin-top: 2px;
+  }
+  main .Contact .brand {
+    margin-bottom: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
