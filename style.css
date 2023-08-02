@@ -292,7 +292,7 @@ footer {
   border-top-left-radius: 10px;
 }
 
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 576px) and (max-width: 768px) {
   header {
     z-index: 9;
     background: #8C82FC;
@@ -302,6 +302,9 @@ footer {
   }
   header nav .navbar button {
     background-color: #22293E;
+  }
+  main {
+    width: 100%;
   }
   main .Hero {
     margin: 160px 50px;
@@ -359,7 +362,7 @@ footer {
     height: 260px;
   }
 }
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 576px) {
   @keyframes line {
     0% {
       transform: translateX(0);

@@ -390,7 +390,9 @@ footer{
 
 
 
-@media (min-width: 481px) and (max-width: 1024px) {
+
+//tablet
+@media (min-width: 576px) and (max-width: 768px) {
   
     header{
         z-index: 9;
@@ -415,7 +417,7 @@ footer{
 
     main{
 
-       
+       width: 100%;
         .Hero{
             margin: 160px 50px;
            
@@ -505,7 +507,7 @@ footer{
 
   
 //   mobile
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 576px) {
  
     @keyframes line{
         0%{
