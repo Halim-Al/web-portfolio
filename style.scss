@@ -744,7 +744,14 @@ footer{
                   
                     img{
                         object-fit: contain;
+                        
+                        .php{
+                            width: 150px;
+                        }
+                        
                     }
+                  
+
                 }
             }
 

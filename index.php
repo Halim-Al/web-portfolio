@@ -75,7 +75,7 @@
                 <div><img src="img/html.png" alt="Html"></div>
                 <div><img style="width: 110px;" src="img/css.png" alt="Css"></div>
                 <div><img src="img/javascript.png" alt="Javascript"></div>
-                <div><img src="img/PHP-logo.svg.png" style="width: 200px;"  alt="PHP"></div>
+                <div><img src="img/PHP-logo.svg.png" style="width: 200px;" class="php"  alt="PHP"></div>
                 <div><img src="img/1200px-Laravel.svg.png" alt="React"></div>
                 <div><img src="img/sass.png" alt="Sass"></div>
                 
@@ -112,12 +112,12 @@
          
 
            
-               <form action="https://formsubmit.co/halimwuw0@gmail.com" method="POST">
+               <form action="mail.php" method="POST">
 
                 <input type="text" placeholder="Your Name" name="name" required>
                 <input type="email" name="email" id="" placeholder="Your Email" required>
                 <textarea name="message" id="" cols="30" rows="10" placeholder="type your message.." required></textarea>
-                <button type="submit"><i class="fa-regular fa-paper-plane"></i> send message</button>
+                <button type="submit" name="submit"><i class="fa-regular fa-paper-plane"></i> send message</button>
                </form>
 
               
