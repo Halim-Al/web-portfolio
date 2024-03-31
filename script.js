@@ -9,6 +9,19 @@ const project = document.getElementById('Project')
 const myproject = document.querySelector('.myproject')
 
 
+// let date = new Date();
+
+
+
+// let test = date.getFullYear()
+
+
+// document.addEventListener(onload, function() {
+//     const year = document.getElementById('year');
+//     year.innerHTML = test;
+//     });
+
+
 const titlelayout = document.querySelector('.titlelayout')
 console.log(titlelayout.classList);
 navmbl.addEventListener('click', function(){
