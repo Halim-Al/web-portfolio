@@ -72,3 +72,16 @@ observeproject.observe(project)
 observeskills.observe(about)
 observhero.observe(hero)
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const detailsElements = document.querySelectorAll("details");
+  
+    detailsElements.forEach(function(details) {
+      details.addEventListener("toggle", function() {
+        if (details.open) {
+          const yOffset = details.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: yOffset, behavior: "smooth" });
+        }
+      });
+    });
+  });

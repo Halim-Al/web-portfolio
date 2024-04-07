@@ -150,17 +150,32 @@ main .About .Skills .Language {
 }
 main .About .Skills .Language div {
   display: flex;
+  margin: 0px -20px -20px;
   justify-content: center;
   padding: 10px;
-  width: 200px;
-  height: 160px;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 50px;
   background: #e0e0e0;
-  box-shadow: 28px 28px 55px #bebebe, -28px -28px 55px #ffffff;
+  box-shadow: 2px 1px 9px 5px #394360 inset;
+  -webkit-box-shadow: 2px 1px 9px 5px #394360 inset;
+  -moz-box-shadow: 2px 1px 9px 5px #394360 inset;
 }
 main .About .Skills .Language div :hover {
   scale: 1.2;
   transition: 0.4s;
+}
+main .About .Skills .Language div img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 170px;
+  height: 140px;
+  filter: grayscale(100%);
+}
+main .About .Skills .Language div img:hover {
+  filter: grayscale(0);
 }
 main .About .Abouttext.show {
   transform: translateY(0);
@@ -194,11 +209,11 @@ main .Project .myproject {
   opacity: 0;
 }
 main .Project .myproject div {
-  height: 350px;
+  height: -moz-max-content;
+  height: max-content;
   width: 240px;
   scale: 0.8;
   border: 2px solid #394360;
-  border-top: none;
   border-radius: 10px;
   text-align: center;
   font-family: "Manrope", sans-serif;
@@ -207,10 +222,37 @@ main .Project .myproject div {
   color: #394360;
 }
 main .Project .myproject div img {
+  border-radius: 10px;
   width: 240px;
-  height: 300px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .Project .myproject div img:hover {
+  opacity: 0.8;
+}
+main .Project .myproject div summary {
+  transition: 2s;
+  cursor: pointer;
+}
+main .Project .myproject div summary:hover {
+  opacity: 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .Project .myproject div p {
+  transition: opacity 2s ease;
+  text-align: start;
+}
+main .Project .myproject div details[open] p {
+  opacity: 1;
+  animation: fadeIn 0.5s ease;
 }
 main .Project .myproject.show {
   opacity: 1;
@@ -338,11 +380,14 @@ footer {
   }
   main .About .Skills .Language div {
     padding: 8px;
-    width: 150px;
-    height: 110px;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   main .About .Skills .Language img {
-    width: 110px;
+    width: 150px;
+    height: 120px;
   }
   main .Project {
     margin: 160px 50px;
@@ -358,12 +403,10 @@ footer {
     justify-content: center;
   }
   main .Project .myproject div {
-    height: 310px;
-    width: 200px;
-  }
-  main .Project .myproject div img {
-    width: 200px;
-    height: 260px;
+    height: -moz-max-content;
+    height: max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 @media (min-width: 320px) and (max-width: 576px) {
@@ -508,15 +551,18 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     background: none;
     justify-content: center;
-    margin: 0px 30px 0px;
   }
   main .About .Skills .Language div {
-    width: 120px;
-    height: 100px;
+    width: -moz-max-content;
+    width: max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   main .About .Skills .Language div img {
     -o-object-fit: contain;
        object-fit: contain;
+    width: 130px;
+    height: 100px;
   }
   main .Project {
     margin: 200px 50px 50px;
@@ -549,7 +595,8 @@ footer {
   }
   main .Project .myproject div {
     width: 300px;
-    height: 160px;
+    height: -moz-max-content;
+    height: max-content;
     margin-top: 10px;
   }
   main .Project .myproject div img {
